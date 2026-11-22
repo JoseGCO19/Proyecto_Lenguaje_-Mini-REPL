@@ -109,24 +109,24 @@ El evaluador opera bajo la **Notación Polaca Inversa (RPN)**. A diferencia de l
 A continuación se detalla el funcionamiento de cada una de las capacidades del programa:
 
 ### 5.1. Operaciones Aritméticas Básicas (`+`, `-`, `*`, `/`)
-Operan extrayendo los dos últimos valores colocados en la pila. El primer valor extraído es el operando derecho ($b$) y el segundo es el operando izquierdo ($a$).
+Operan extrayendo los dos últimos valores colocados en la pila. El primer valor extraído es el operando derecho (`b`) y el segundo es el operando izquierdo (`a`).
 
-* **Suma (`+`):** Suma $a + b$.
+* **Suma (`+`):** Suma `a + b`.
   ```text
   rpn> 15 27 +
   => 42 (Int)
   ```
-* **Resta (`-`):** Resta $a - b$.
+* **Resta (`-`):** Resta `a - b`.
   ```text
   rpn> 50 20 -
   => 30 (Int)
   ```
-* **Multiplicación (`*`):** Multiplica $a \times b$.
+* **Multiplicación (`*`):** Multiplica `a * b`.
   ```text
   rpn> 6 7 *
   => 42 (Int)
   ```
-* **División (`/`):** Divide $a / b$.
+* **División (`/`):** Divide `a / b`.
   * Si la división entera es exacta, produce un `Int`:
     ```text
     rpn> 84 2 /
@@ -143,7 +143,7 @@ Operan extrayendo los dos últimos valores colocados en la pila. El primer valor
     => 12.5 (Float)
     ```
 * **Expresiones Aritméticas Compuestas:**
-  Para evaluar $(3 + 5) \times (10 - 2) / 4$:
+  Para evaluar `(3 + 5) * (10 - 2) / 4`:
   ```text
   rpn> 3 5 + 10 2 - * 4 /
   => 16 (Int)
@@ -191,7 +191,7 @@ Permiten evaluar relaciones de orden y lógica formal, depositando en la pila un
   => true (Bool)
   ```
 * **Expresión Lógica Combinada:**
-  Evaluar $(5 < 10) \text{ and } (20 > 15)$:
+  Evaluar `(5 < 10) and (20 > 15)`:
   ```text
   rpn> 5 10 < 20 15 > and
   => true (Bool)
@@ -201,7 +201,10 @@ Permiten evaluar relaciones de orden y lógica formal, depositando en la pila un
 
 ### 5.3. Asignación y Manejo de Variables (`=`)
 El evaluador sigue una sintaxis postfija estricta para la asignación:
-$$\text{<identificador>} \quad \text{<valor\_o\_expresión>} \quad =$$
+
+```text
+<identificador> <valor_o_expresión> =
+```
 
 * **Asignación de un valor directo:**
   ```text
@@ -209,7 +212,7 @@ $$\text{<identificador>} \quad \text{<valor\_o\_expresión>} \quad =$$
   => 10 (Int)
   ```
 * **Asignación del resultado de una expresión previa:**
-  Para asignar a la variable `y` el valor de $(x + 5) \times 2$:
+  Para asignar a la variable `y` el valor de `(x + 5) * 2`:
   ```text
   rpn> y x 5 + 2 * =
   => 30 (Int)
