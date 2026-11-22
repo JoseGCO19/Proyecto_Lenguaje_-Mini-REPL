@@ -1,0 +1,29 @@
+# Caso de Prueba 4: Variables y Tabla de Símbolos en Notación Postfija
+# Demuestra asignación estricta en RPN, reuso y consulta con 'vars'
+
+# 1. Asignación directa: x 10 =
+x 10 =
+
+# 2. Asignación con expresión previa: y x 5 + 2 * =   -> y = (10 + 5) * 2 = 30
+y x 5 + 2 * =
+
+# 3. Uso de variables en operaciones: x y + -> 10 + 30 = 40
+x y +
+
+# 4. Declaración de una variable flotante: pi 3.14159 =
+pi 3.14159 =
+
+# 5. Declaración de una variable booleana: es_activo true =
+es_activo true =
+
+# 6. Actualización de una variable existente: x 50 =
+x 50 =
+
+# 7. Consultar variables activas en memoria
+vars
+
+# 8. Verificamos el estado de la pila
+stack
+
+clear
+exit

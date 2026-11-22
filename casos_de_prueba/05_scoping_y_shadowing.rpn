@@ -1,0 +1,39 @@
+# Caso de Prueba 5: Alcance Local y Sombreado (Scoping y Shadowing)
+# Requisito 4: Las variables definidas o modificadas dentro del ámbito local
+# no deben sobrescribir permanentemente las variables homónimas del entorno global una vez cerrado el bloque.
+
+# 1. Definimos variables globales
+x 10 =
+y 20 =
+vars
+
+# 2. Abrimos bloque local temporal (nivel 1)
+begin
+
+# 3. Consultamos variables visibles en el bloque local
+vars
+
+# 4. Sombreamos 'x' localmente y definimos una variable puramente local 'z'
+x 999 =
+z 77 =
+
+# 5. Consultamos tabla de símbolos: 'x' debe figurar como local L1 (sombreando a global)
+vars
+
+# 6. Realizamos cálculos dentro del bloque local usando variables sombreadas y locales
+x y +
+x z +
+
+# 7. Cerramos el bloque local temporal
+end
+
+# 8. Verificamos que 'x' recuperó su valor global original de 10
+x
+
+# 9. Verificamos que la variable local 'z' ya no existe (producirá error controlado de entorno)
+z
+
+# 10. Consultamos la tabla de símbolos final: solo existen x=10 e y=20
+vars
+
+exit

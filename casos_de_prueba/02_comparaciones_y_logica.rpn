@@ -1,0 +1,33 @@
+# Caso de Prueba 2: Comparaciones Lógicas y Operadores Booleanos
+# Probando ==, !=, <, >, and, or, not con booleanos y números
+
+# 1. Igualdad numérica: 10 == 10 -> true
+10 10 ==
+
+# 2. Desigualdad numérica: 10 != 20 -> true
+10 20 !=
+
+# 3. Menor que: 15 < 30 -> true
+15 30 <
+
+# 4. Mayor que: 5 > 10 -> false
+5 10 >
+
+# 5. Comparaciones con números decimales: 3.14 < 3.1416 -> true
+3.14 3.1416 <
+
+# 6. Operaciones lógicas booleanas: true and false -> false
+true false and
+
+# 7. Disyunción lógica: true or false -> true
+true false or
+
+# 8. Negación lógica unaria: false not -> true
+false not
+
+# 9. Expresión lógica compuesta: (5 < 10) and (20 > 15) -> true
+5 10 < 20 15 > and
+
+stack
+clear
+exit

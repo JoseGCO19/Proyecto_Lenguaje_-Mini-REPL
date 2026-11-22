@@ -1,0 +1,36 @@
+# Caso de Prueba 3: Manejo Controlado de Errores
+# El evaluador no debe abortar ni caer en panic ante situaciones erróneas
+
+# 1. Error: División entre cero entero (debe reportar error matemático y continuar)
+10 0 /
+
+# 2. Error: División entre cero flotante
+25.5 0.0 /
+
+# 3. Error: Pila insuficiente / Stack Underflow en operador binario
++
+
+# 4. Error: Pila insuficiente con sólo un operando
+5 +
+
+# 5. Error de Tipos: Sumar un número y un booleano (5 true +)
+5 true +
+
+# 6. Error de Tipos: Comparar número y booleano (10 true ==)
+10 true ==
+
+# 7. Error Léxico: Token no reconocido
+10 20 @@@
+
+# 8. Error de Asignación: Asignar a un número en vez de una variable (5 10 =)
+5 10 =
+
+# 9. Error de Entorno: Usar variable no definida
+variable_fantasma 2 *
+
+# 10. Error de Alcance: Intentar cerrar bloque sin haberlo abierto (end sin begin)
+end
+
+# Recuperación exitosa tras los errores: el programa sigue vivo y puede calcular normalmente
+10 20 +
+exit

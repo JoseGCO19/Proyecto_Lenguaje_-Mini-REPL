@@ -1,0 +1,30 @@
+# Caso de Prueba 1: Operaciones Aritméticas Básicas y Sistema de Tipos Numéricos
+# Probando suma, resta, multiplicación, división exacta y decimal
+
+# 1. Suma de enteros: 15 + 27 = 42
+15 27 +
+
+# 2. Resta de enteros: 100 - 35 = 65
+100 35 -
+
+# 3. Multiplicación de enteros: 6 * 7 = 42
+6 7 *
+
+# 4. División entera exacta: 84 / 2 = 42
+84 2 /
+
+# 5. División con resultado decimal: 7 / 2 = 3.5 (Float)
+7 2 /
+
+# 6. Operaciones mixtas con decimales (promoción a Float): 10 + 2.5 = 12.5
+10 2.5 +
+
+# 7. Operación combinada RPN: (3 + 5) * (10 - 2) / 4 = 16
+3 5 + 10 2 - * 4 /
+
+# Verificamos estado de la pila
+stack
+
+# Limpiamos la pila
+clear
+exit
